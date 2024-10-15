@@ -1,0 +1,535 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 18px; /* Set base font size to 18px */
+}
+
+/* Starry Background - Galaxy Style */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Layer this behind the star layers */
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%),
+        rgba(50, 0, 100, 1) 0%,            /* Darker violet */
+        rgba(40, 0, 50, 1) 40%,            /* Darker purple */
+        rgba(0, 0, 20, 1) 100%);           /* Darker space blue */
+    transition: background-position 0.1s ease-out; /* Smooth transition */
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40vw; /* Set width to 40% of the viewport width */
+    height: 100%;
+    background: transparent; /* Fully transparent background */
+    color: #fff;
+    padding: 1em; /* Adjust padding to move content */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left side) */
+    justify-content: flex-start; /* Align content to the top */
+    z-index: 10;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Sidebar Logo */
+.sidebar-logo {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 2em; /* Move the content down */
+}
+
+/* Name Styling */
+.sidebar-logo .name {
+    font-size: 30px; /* Larger size for the name */
+    font-weight: bold; /* Make the name bold */
+    margin: 0; /* Remove margin for better alignment */
+}
+
+/* Title Styling */
+.sidebar-logo .title {
+    font-size: 20px; /* Medium size for the title */
+    margin: 0.1em 0; /* Add space between the name and the title */
+}
+
+/* Description Styling */
+.sidebar-logo .description {
+    font-size: 16px; /* Smaller size for the description */
+    margin: 0; /* Remove margin for better alignment */
+    line-height: 1.5; /* Improve readability with line height */
+    text-align: left; /* Align text to the left for better alignment */
+    max-width: 100%; /* Allow the description to use full width */
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em; /* Add space between the logo and the menu */
+}
+
+/* Sidebar Menu Item */
+.sidebar-menu li {
+    margin: 1em 0;
+    position: relative; /* To position the line relative to the menu item */
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; /* Set text size to 18px */
+    display: inline-block; /* Ensure the line is positioned correctly */
+    padding: 0.5em 1em; /* Add padding around the text */
+    position: relative; /* To position the line relative to the text */
+}
+
+.sidebar-menu a::before {
+    content: ''; /* No text, just a line */
+    display: block;
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the line */
+    background: #53C8B6; /* Color of the line */
+    transition: width 0.3s; /* Smooth transition for the line width */
+    position: absolute; /* Position the line absolutely */
+    right: 0; /* Align the line to the right edge */
+    bottom: 0; /* Align the line to the bottom of the menu item */
+    margin-top: auto; /* Push the line to the bottom */
+}
+
+.sidebar-menu a:hover::before {
+    width: 100%; /* Expand the line to full width on hover */
+}
+
+/* Additional hover styling for the text */
+.sidebar-menu a:hover {
+    color: #53C8B6; /* Change text color on hover */
+}
+
+/* Sidebar Logo Image */
+.sidebar-logo-image {
+    position: fixed; /* Fix the container's position relative to the viewport */
+    bottom: 0; /* Align to the bottom of the page */
+    right: 0; /* Align to the right of the page */
+    margin: 1em; /* Optional: Add spacing around the image */
+    text-align: right; /* Aligns the content to the right within the container */
+    z-index: 20; /* Ensure it appears above other content if needed */
+}
+
+/* Sidebar Logo Image - Image */
+.sidebar-logo-image img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+
+/* Contact Me Section */
+.contact-section {
+    margin-top: 2em; /* Adjust space above the contact section */
+    margin-bottom: 3em; /* Add space below the contact section */
+    width: 100%; /* Ensure full width */
+}
+
+/* Sidebar Socials */
+.sidebar-socials {
+    margin-top: 1em; /* Adjust margin-top for spacing */
+    display: flex;
+    justify-content: start;
+    padding-top: 0em; /* Add space above the social icons */
+    width: 100%; /* Ensure full width */
+}
+
+.sidebar-socials a {
+    color: #fff;
+    margin: 0 0.5em;
+    font-size: 24px; /* Adjusted size for social icons */
+}
+
+.sidebar-socials a:hover {
+    color: #53C8B6;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 40vw; /* Adjusted to match the sidebar width */
+    padding: 2em;
+    color: #fff; /* Ensure text is visible */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the start (left side) */
+    justify-content: flex-start; /* Align content to the start (top) */
+    min-height: 100vh; /* Ensure full viewport height for vertical alignment */
+    width: 60vw; /* Ensure the width matches the space available */
+}
+
+/* Content Sections */
+.content-section {
+    width: 100%;
+    max-width: 800px; /* Optional: Set a max-width for better readability */
+    text-align: left; /* Align text to the left */
+    margin-bottom: 2em; /* Space below sections */
+    font-size: 18px; /* Set text size to 18px */
+}
+
+/* About Section */
+.about {
+    margin-bottom: 2em; /* Space below the About section */
+    font-size: 18px; /* Set text size to 18px */
+}
+
+/* Experience Section */
+.experience {
+    margin-bottom: 4em; /* Add more space below the Experience section */
+    font-size: 18px; /* Set text size to 18px */
+}
+
+/* Projects Section */
+.projects {
+    margin-top: 2em; /* Add space above the Projects section */
+    margin-bottom: 6em; /* Space below the Projects section */
+    font-size: 18px; /* Set text size to 18px */
+}
+
+/* Contact Section */
+.contact {
+    margin-bottom: 2em; /* Space below the Contact section */
+    font-size: 12px; /* Set text size to 18px */
+}
+/* Ensure cards and other elements do not overlap */
+.my-card {
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1em;
+    margin-bottom: 2em;
+    font-size: 18px; /* Set text size to 18px */
+}
+
+.my-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.my-card h3 {
+    margin: 1em 0 0.5em;
+}
+
+.my-card p {
+    margin: 0.5em 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px; /* Adjust width for smaller screens */
+    }
+
+    .main-content {
+        margin-left: 250px; /* Adjust margin to match sidebar width */
+    }
+}
+
+.contact-btn {
+    display: inline-block; /* Ensure the border fits around the heading */
+    text-decoration: none; /* Remove default underline */
+    color: #fff; /* Ensure the text color matches the theme */
+    border: 3px solid #fff; /* Add a border around the heading */
+    padding: 1em 2em; /* Add padding inside the border */
+    border-radius: 8px; /* Rounded corners for the border */
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    margin-bottom: 0.5em; /* Space below the contact button */
+}
+
+.contact-btn:hover {
+    border-color: #53C8B6; /* Change border color on hover */
+    background-color: #00274d; /* Change background color on hover */
+    box-shadow: 0 0 15px #53C8B6; /* Add light effect around the border */
+}
+
+.contact-btn h2 {
+    font-size: 18px; /* Font size for the heading */
+    margin: 0; /* Remove margin to align with the border */
+    cursor: pointer; /* Indicate that it is clickable */
+}
+
+
+/* Styling for Job Company */
+.job-header {
+    display: flex;
+    align-items: flex-start; /* Align items to the start for better vertical alignment */
+    font-size: 18px; /* Set base font size for job header */
+    margin-bottom: -1em; /* Space below job title and company */
+}
+
+.job-company {
+    font-weight: bold;
+    color: #fff; /* Main text color for company name */
+    font-size: 18px; /* Size for company name */
+    flex-shrink: 0; /* Prevent company name from shrinking */
+    position: relative; /* Position relative to use the ::after pseudo-element */
+    padding-right: 40px; /* Add padding to the right to make space for the arrow */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.job-date {
+    font-weight: normal;
+    font-size: 16px; /* Smaller font size for the date */
+    color: #ececec; /* Use an accent color for dates */
+    width: 149px; /* Fixed width to keep date and company on the same line */
+    margin-right: 6em; /* Space between date and company name */
+    white-space: nowrap; /* Prevent date from wrapping */
+}
+
+/* Add arrow after job company name */
+.job-company::after {
+    content: '↗︎'; /* Unicode for the new arrow */
+    font-size: 14px; /* Font size for the arrow */
+    color: #fff; /* Arrow color (same as the company name) */
+    position: absolute; /* Absolute positioning relative to the .job-company element */
+    right: 0; /* Align arrow to the right edge */
+    top: 50%; /* Center arrow vertically */
+    transform: translateY(-50%) scale(0.8); /* Initial size smaller */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions for scaling and color */
+}
+
+/* Add scaling animation on hover */
+.job:hover .job-company::after {
+    transform: translateY(-50%) scale(1.2); /* Scale up the arrow on hover */
+    color: #53C8B6; /* Arrow color on hover (same as the job title) */
+}
+
+/* Styling for Job Description */
+.job p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size for description */
+    line-height: 1.6; /* Better line-height for readability */
+    margin-top: 2em; /* Space above description to align with job title */
+    margin-left: 245px; /* Align description to start where the company name ends */
+    max-width: calc(100% - 152px); /* Ensure description doesn't overflow */
+}
+
+/* Ensure the description wraps properly */
+.job {
+    margin-bottom: 2em; /* Space between each job section */
+    border: 2px solid transparent; /* Initial transparent border to avoid layout shift */
+    padding: 1em; /* Padding to start with */
+    border-radius: 8px; /* Rounded corners for the border */
+    transition: border-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border color, padding, and box-shadow */
+}
+
+/* Highlight experience section on hover */
+.job:hover {
+    border-color: #000000; /* Border color on hover */
+    padding: 1em; /* Maintain padding to avoid layout shift */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.3); /* Glow effect around the border */
+}
+
+/* Change job title color on hover */
+.job:hover .job-company {
+    color: #53C8B6; /* New color for the job title on hover */
+}
+
+/* Styling for Resume Button */
+.resume-button {
+    display: inline-flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Font size for the button text */
+    color: #ffffff; /* Text color */
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from the link */
+    text-align: center; /* Center the text */
+    position: relative; /* Position relative for the arrow */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color and shadow */
+}
+
+/* Add arrow next to button text */
+.resume-button::after {
+    content: '↗︎'; /* Unicode for the arrow */
+    font-size: 14px; /* Font size for the arrow */
+    color: #ffffff; /* Arrow color (same as the button text) */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+    transform: scale(0.8); /* Initial size smaller */
+}
+
+/* Hover effect for button */
+.resume-button:hover {
+    color: #53C8B6; /* Text color on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.3); /* Glow effect around the button */
+}
+
+/* Hover effect for arrow */
+.resume-button:hover::after {
+    transform: scale(1.2); /* Scale up the arrow on hover */
+    color: #53C8B6; /* Arrow color on hover (same as text color) */
+}
+
+
+
+/* Project Header Styling */
+.project-header {
+    display: flex;
+    align-items: flex-start;
+    font-size: 18px; /* Match the base font size */
+    margin-bottom: -1em; /* Adjust spacing below the header */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Project Name Styling */
+.project-name {
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px; /* Ensure project name matches the company name size */
+    flex-shrink: 0;
+    position: relative;
+    padding-right: 40px; /* Make space for the arrow */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Project Date Styling */
+.project-date {
+    font-weight: normal;
+    font-size: 16px; /* Match the date size in Experience section */
+    color: #ececec;
+    width: 150px; /* Adjust width to fit better with the project name */
+    margin-right: 1em; /* Adjust spacing between date and project name */
+    white-space: nowrap;
+}
+
+/* Add arrow after project name */
+.project-name::after {
+    content: '↗︎'; /* Unicode arrow */
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8); /* Initial smaller scale */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for project header */
+.project-header:hover .project-name::after {
+    transform: translateY(-50%) scale(1.2); /* Scale up on hover */
+    color: #53C8B6; /* Change arrow color on hover */
+}
+
+.project-header:hover .project-name {
+    color: #53C8B6; /* Change project name color on hover */
+}
+
+/* Project Content Layout */
+.project-content {
+    display: flex;
+    align-items: flex-start; /* Align content at the start (top) */
+    margin-bottom: 2em; /* Space between project cards */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Styling for the Project Image */
+.project-image {
+    width: 120px; /* Set a consistent width for images */
+    height: 90px; /* Adjust height to match the width aspect ratio */
+    object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
+    margin-right: 1.5em; /* Space between the image and the project details */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Styling for the Project Details */
+.project-details {
+    flex-grow: 1; /* Allow the details to take up remaining space */
+}
+
+/* Styling for the Project Description */
+.project-description {
+    font-size: 16px; /* Font size for description */
+    color: #ddd; /* Slightly lighter color for description text */
+    margin: 0; /* Remove default margin */
+    line-height: 1.4; /* Increase line height for readability */
+    max-width: 600px; /* Max width to ensure text wraps nicely */
+    overflow: hidden; /* Hide any overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limit the number of lines to 3 */
+    line-clamp: 3; /* Standard property for compatibility */}
+
+/* Styling for Project Archive Link */
+.project-name.no-underline {
+    display: inline-flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Adjust padding inside the border */
+    font-size: 16px; /* Font size for the text */
+    color: #ffffff; /* Text color */
+    background-color: transparent; /* Transparent background */
+    border-radius: 5px; /* Rounded corners for the border */
+    text-decoration: none; /* Remove underline from the link */
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-bottom: 0.5em; /* Space below the link */
+}
+
+/* Hover effect for Project Archive Link */
+.project-name.no-underline:hover {
+    color: #53C8B6; /* Change text color on hover */
+    border-color: #53C8B6; /* Change border color on hover */
+    box-shadow: 0 0 15px #000000; /* Add light effect around the border */
+}
+
+/* Hover effect for arrow */
+.project-name.no-underline::after {
+    content: '↗︎'; /* Unicode arrow */
+    font-size: 14px; /* Font size for the arrow */
+    color: #ffffff; /* Arrow color (same as the link text) */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+    transform: scale(0.8); /* Initial size smaller */
+}
+
+/* Hover effect for arrow */
+.project-name.no-underline:hover::after {
+    transform: scale(1.2); /* Scale up the arrow on hover */
+    color: #53C8B6; /* Arrow color on hover (same as text color) */
+}
+
+/* Ensure the description wraps properly */
+.project {
+    margin-bottom: 2em; /* Space between each project section */
+    padding: 1em; /* Padding to start with */
+    border-radius: 8px; /* Rounded corners for the border */
+    transition: padding 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for padding and box-shadow */
+}
+
+/* Hover effect for project section */
+.project:hover .project-name::after {
+    transform: translateY(-50%) scale(1.2); /* Scale up on hover */
+    color: #53C8B6; /* Change arrow color on hover */
+}
+
+.project:hover .project-name {
+    color: #53C8B6; /* Change project name color on hover */
+}
