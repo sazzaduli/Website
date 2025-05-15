@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+    <style>
+    .hero { font-size: 2rem; color: #333; text-align: center; }
+    html { scroll-behavior: smooth; }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sazzadul Islam - Mathematics & AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Animation -->
+<div id="wrapper">
+    <canvas id="canvas" width="1950px" height="800px"></canvas>
+    <canvas id="canvasbg" width="1950px" height="800px"></canvas>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+<!-- Navigation -->
+<nav>
+    <div class="logo nav-item">
+        <a href="#">S</a>
+    </div>
+    <ul>
+        <li class="nav-item"><a href="#intro">Home</a></li>
+        <li class="nav-item"><a href="#about">01. About</a></li>
+        <li class="nav-item"><a href="#experience">02. Experience</a></li>
+        <li class="nav-item"><a href="#projects">03. Work</a></li>
+        <li class="nav-item"><a href="#contact">04. Contact</a></li>
+        <li class="nav-item resume"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">Resume</a></li>
+    </ul>
+    <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+
+<!-- Intro Section -->
+<section id="intro">
+    <div class="intro-content">
+        <div class="intro-text">
+            <h1 class="fade-in">Hi, my name is</h1>
+            <h2 class="fade-in">Sazzadul Islam.</h2>
+            <p class="tagline fade-in">I build with mathematics and AI.</p>
+            <p class="fade-in">I'm a mathematics student specializing in applied and computational mathematics. Currently, I'm focused on developing AI models and mathematical solutions at University of Greenwich.</p>
+
+            <div id="for-recruiters" class="fade-in">
+                <h2><i class="fas fa-briefcase"></i> For Recruiters</h2>
+                <div class="recruiter-grid">
+                    <div class="recruiter-item">
+                        <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                        <p>Python, R, SQL, C++, MATLAB, TensorFlow, PyTorch</p>
+                    </div>
+                    <div class="recruiter-item">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>London, UK (Open to Remote)</p>
+                    </div>
+                    <div class="recruiter-item">
+                        <h3><i class="fas fa-calendar-alt"></i> Education</h3>
+                        <p>B.Sc. in Mathematics, University of Greenwich</p>
+                    </div>
+                    <div class="recruiter-item">
+                        <h3><i class="fas fa-user-tie"></i> Status</h3>
+                        <p>Open to opportunities</p>
+                        <span class="availability">Available for internships</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-links fade-in">
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank" class="contact-link">
+                    <i class="fas fa-file-pdf"></i> Download Resume
+                </a>
+                <a href="#contact" class="contact-link">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+                <a href="https://www.linkedin.com/in/sazzaduli507316/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about">
+    <div class="container">
+        <h1 class="section-title">01. About Me</h1>
+        <p>Hello! My name is Sazzadul Islam and I'm passionate about mathematics and its applications in AI and data science. My interest in computational mathematics started during my early university years when I discovered how mathematical principles could be applied to solve real-world problems.</p>
+        <p>Currently pursuing my B.Sc. in Mathematics at the University of Greenwich with a focus on Applied and Computational Mathematics, I'm on track to graduate with First Class Honors in May 2026.</p>
+        <p>My coursework includes Machine Learning, Stochastic Processes, Data Science, Financial Time Series, Optimisation, Bayesian Methods, Numerical Analysis, Linear Algebra and Complex Analysis. I've also completed several certifications including AWS AI Practitioner, AWS Machine Learning Engineer Associate, and AWS Solutions Architect Associate.</p>
+
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <div class="skill-name">Python</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-name">R</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <div class="skill-name">SQL</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-name">C++</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="skill-name">MATLAB</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Tools & Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                        <div class="skill-name">AWS</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+                        <div class="skill-name">Azure</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <div class="skill-name">TensorFlow</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                        <div class="skill-name">PyTorch</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                        <div class="skill-name">Git/GitLab</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Data & Analytics</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="skill-name">Power BI</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-table"></i></div>
+                        <div class="skill-name">Excel</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="skill-name">Jupyter</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="skill-name">Seaborn</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <div class="skill-name">Spark</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <div class="container">
+        <h1 class="section-title">02. Where I've Worked</h1>
+        <div class="experience-container">
+            <!-- Company List on the Left -->
+            <div class="company-list">
+                <button class="company-btn active" data-company="data-annotation">Data Annotation Tech</button>
+                <button class="company-btn" data-company="darul-arqam">Darul Arqam</button>
+                <button class="company-btn" data-company="excel-tutor">Excel Tutor</button>
+            </div>
+
+            <!-- Job Details on the Right -->
+            <div class="job-details">
+                <!-- Data Annotation Tech -->
+                <div id="data-annotation" class="job active">
+                    <h2><span class="job-title">Freelance AI Training</span> @ <span class="job-company">Data Annotation Tech</span></h2>
+                    <p class="job-period"><i class="far fa-calendar-alt"></i> Nov 2023 – Present</p>
+
+                    <div class="job-metrics">
+                        <h3>Key Achievements</h3>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-brain"></i></div>
+                                <div class="metric-text">Solved <span class="metric-value">1,000+</span> math problems</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="metric-text"><span class="metric-value">20-25%</span> model accuracy improvement</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="metric-text">Enhanced <span class="metric-value">model</span> performance</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>Solved and reviewed over 1,000+ complex mathematics problems (algebra, calculus, statistics) to train large language models, contributing to a 20–25% improvement in model accuracy.</li>
+                        <li>Evaluated AI-generated solutions for correctness and clarity, ensuring outputs met high-quality standards in line with project requirements.</li>
+                        <li>Collaborated with remote teams on both short-term and long-term projects, providing clear, structured feedback that helped refine model performance and mathematical understanding.</li>
+                    </ul>
+                </div>
+
+                <!-- Darul Arqam -->
+                <div id="darul-arqam" class="job">
+                    <h2><span class="job-title">Volunteer</span> @ <span class="job-company">Darul Arqam Muslim Community Centre</span></h2>
+                    <p class="job-period"><i class="far fa-calendar-alt"></i> Mar 2023 – Present</p>
+
+                    <div class="job-metrics">
+                        <h3>Key Achievements</h3>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-users"></i></div>
+                                <div class="metric-text">Led programs with <span class="metric-value">50+</span> attendees</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-pound-sign"></i></div>
+                                <div class="metric-text">Raised <span class="metric-value">£50,000+</span> for charity</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-laptop"></i></div>
+                                <div class="metric-text">Managed <span class="metric-value">digital</span> presence</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>Assist with administrative duties such as answering phones, responding to emails, managing paperwork, and keeping records updated.</li>
+                        <li>Help plan and run monthly youth events (50+ attendees), working with a small team of volunteers to coordinate, set up venues, and assist in delivering successful community fundraisers that have raised over £50,000.</li>
+                        <li>Contribute to the mosque's digital presence by updating its website, managing social media accounts, and troubleshooting IT issues.</li>
+                    </ul>
+                </div>
+
+                <!-- Excel Tutor -->
+                <div id="excel-tutor" class="job">
+                    <h2><span class="job-title">Mathematics Tutor</span> @ <span class="job-company">Excel Tutor</span></h2>
+                    <p class="job-period"><i class="far fa-calendar-alt"></i> Sep 2023 – Jun 2024</p>
+
+                    <div class="job-metrics">
+                        <h3>Key Achievements</h3>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-award"></i></div>
+                                <div class="metric-text"><span class="metric-value">85%</span> A-B grade rate</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="metric-text"><span class="metric-value">250+</span> tutoring hours</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon"><i class="fas fa-thumbs-up"></i></div>
+                                <div class="metric-text"><span class="metric-value">90%</span> student improvement</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>Delivered 250+ hours of 1:1 and group tutoring in GCSE and A-Level Mathematics, leading to 85% of A-Level students achieving A–B grades and 80% of GCSE students improving by at least one grade.</li>
+                        <li>Simplified complex mathematical concepts using adaptable teaching methods, boosting student confidence and understanding, with 90% of students reporting significant improvement.</li>
+                        <li>Collaborated with other tutors to standardise teaching quality and align performance tracking, using Excel for progress monitoring and feedback analysis.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h1 class="section-title">03. Some Things I've Built</h1>
+        <div class="projects-grid">
+            <!-- Autonomous Vehicles Project -->
+            <div class="project-card">
+                <span class="project-label">Featured Project</span>
+                <h2>Classify Object Behavior for Autonomous Vehicles</h2>
+                <div class="project-description">
+                    <p>Engineered advanced driving simulations using MATLAB's Automated Driving Toolbox to model dynamic interactions between vehicles, pedestrians, and multi-modal sensors. Developed and trained supervised ML models to detect and classify high-risk behaviors (e.g., aggressive acceleration, erratic pedestrian movements), achieving 87% prediction accuracy on validation sets.</p>
+                </div>
+
+                <div class="project-metrics">
+                    <div class="project-metric">
+                        <div class="metric-number">87%</div>
+                        <div class="metric-label">Prediction Accuracy</div>
+                    </div>
+                    <div class="project-metric">
+                        <div class="metric-number">95%</div>
+                        <div class="metric-label">Motion Estimation</div>
+                    </div>
+                    <div class="project-metric">
+                        <div class="metric-number">200+</div>
+                        <div class="metric-label">Simulations</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span>MATLAB</span>
+                    <span>Simulink</span>
+                    <span>Machine Learning</span>
+                    <span>Automated Driving Toolbox</span>
+                    <span>Sensor Fusion</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i> Project Details</a>
+                    <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- AI Mathematical Olympiad Project -->
+            <div class="project-card">
+                <span class="project-label">Featured Project</span>
+                <h2>AI Mathematical Olympiad - Progress Prize 2</h2>
+                <div class="project-description">
+                    <p>Participated in a global AI competition to solve 110+ national-level math problems using Python and transformer-based NLP models trained on LaTeX-formatted questions. Engineered robust preprocessing pipelines for algebra, geometry, and number theory datasets; leveraged modular arithmetic and symbolic computation to boost model precision under constrained formats.</p>
+                </div>
+
+                <div class="project-metrics">
+                    <div class="project-metric">
+                        <div class="metric-number">110+</div>
+                        <div class="metric-label">Math Problems</div>
+                    </div>
+                    <div class="project-metric">
+                        <div class="metric-number">85%+</div>
+                        <div class="metric-label">Test Accuracy</div>
+                    </div>
+                    <div class="project-metric">
+                        <div class="metric-number">&lt;30</div>
+                        <div class="metric-label">Minutes Inference</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>PyTorch</span>
+                    <span>LaTeX</span>
+                    <span>API Integration</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i> Kaggle Competition</a>
+                    <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Projects Section -->
+<section id="other-projects">
+    <div class="container">
+        <h1 class="section-title">Other Noteworthy Projects</h1>
+        <div class="archive-link">
+            <button id="toggle-projects" class="view-archive">
+                Show More <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="noteworthy-projects-grid">
+            <!-- Project 1 -->
+            <div class="noteworthy-project-card">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Financial Time Series Forecasting</h2>
+                <p>Developed a financial time series forecasting model using ARIMA, GARCH, and LSTM neural networks to predict stock market movements with 78% accuracy on test data.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>Pandas</span>
+                    <span>Statsmodels</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="noteworthy-project-card">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Bayesian Optimization Algorithm</h2>
+                <p>Implemented a Bayesian optimization algorithm for hyperparameter tuning of machine learning models, reducing training time by 40% while maintaining model performance.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Scikit-learn</span>
+                    <span>Bayesian Methods</span>
+                    <span>Gaussian Processes</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="noteworthy-project-card">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Stochastic Process Simulator</h2>
+                <p>Created a stochastic process simulator to model and visualize random walks, Brownian motion, and Markov chains for educational purposes in probability theory courses.</p>
+                <div class="tech-stack">
+                    <span>MATLAB</span>
+                    <span>Statistics Toolbox</span>
+                    <span>Visualization</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="noteworthy-project-card">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Numerical Analysis Toolkit</h2>
+                <p>Developed a comprehensive toolkit for numerical analysis implementing various methods for solving differential equations, numerical integration, and optimization problems with interactive visualizations.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>NumPy</span>
+                    <span>SciPy</span>
+                    <span>Matplotlib</span>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="noteworthy-project-card">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Algorithmic Trading Bot</h2>
+                <p>Built an algorithmic trading bot that uses machine learning to predict market movements and execute trades automatically, achieving a 15% annual return in backtesting.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>scikit-learn</span>
+                    <span>Alpaca API</span>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="noteworthy-project-card">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Neural Network Visualization</h2>
+                <p>Created an interactive web application to visualize neural network architectures and training processes in real-time, helping students understand deep learning concepts.</p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>D3.js</span>
+                    <span>TensorFlow.js</span>
+                    <span>React</span>
+                </div>
+            </div>
+
+            <!-- Project 7 (Hidden initially) -->
+            <div class="noteworthy-project-card hidden-project">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Cryptography Toolkit</h2>
+                <p>Developed a comprehensive toolkit for implementing and analyzing various cryptographic algorithms, including RSA, AES, and elliptic curve cryptography.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>C++</span>
+                    <span>OpenSSL</span>
+                    <span>Cryptography</span>
+                </div>
+            </div>
+
+            <!-- Project 8 (Hidden initially) -->
+            <div class="noteworthy-project-card hidden-project">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Quantum Computing Simulator</h2>
+                <p>Built a simulator for quantum computing algorithms that allows users to experiment with quantum gates and circuits without requiring access to actual quantum hardware.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Qiskit</span>
+                    <span>NumPy</span>
+                    <span>Matplotlib</span>
+                </div>
+            </div>
+
+            <!-- Project 9 (Hidden initially) -->
+            <div class="noteworthy-project-card hidden-project">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Graph Theory Visualizer</h2>
+                <p>Created an interactive tool for visualizing graph theory concepts and algorithms, including shortest path, minimum spanning tree, and network flow algorithms.</p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>D3.js</span>
+                    <span>React</span>
+                    <span>Algorithms</span>
+                </div>
+            </div>
+
+            <!-- Project 10 (Hidden initially) -->
+            <div class="noteworthy-project-card hidden-project">
+                <div class="project-top">
+                    <div class="folder-icon">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/sazzaduli" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h2>Natural Language Processing Toolkit</h2>
+                <p>Developed a custom NLP toolkit for analyzing mathematical text and extracting structured information from research papers and textbooks.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>NLTK</span>
+                    <span>spaCy</span>
+                    <span>Transformers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h1 class="section-title">04. Get In Touch</h1>
+        <h2>Let's Work Together</h2>
+        <p>I'm currently open to new opportunities and would love to hear about your project. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+
+        <div class="contact-form">
+            <div class="form-success-message" id="formSuccessMessage">
+                Thank you! Your message has been sent successfully.
+            </div>
+            <div class="form-error-message" id="formErrorMessage">
+                Oops! Something went wrong. Please try again.
+            </div>
+
+            <form id="contactForm" action="https://formsubmit.co/sazzaduli16@gmail.com" method="POST">
+                <!-- FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="New message from Portfolio Website">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value=""> <!-- Will be set via JavaScript -->
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Left Side Email -->
+<div class="left-side">
+    <a href="mailto:sazzaduli16@gmail.com">sazzaduli16@gmail.com</a>
+</div>
+
+<!-- Right Side Social Media Links -->
+<div class="right-side">
+    <a href="https://github.com/sazzaduli" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/sazzaduli507316" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://codepen.io/yourusername" target="_blank" aria-label="CodePen">
+        <i class="fab fa-codepen"></i>
+    </a>
+</div>
+
+<!-- Theme Toggle -->
+<label class="toggle">
+    <input type="checkbox">
+    <div></div>
+</label>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>Designed & Built by <a href="https://github.com/sazzaduli" target="_blank" rel="noopener noreferrer">Sazzadul Islam</a></p>
+        <div class="github-stats">
+            <span>☆ 7,745</span>
+            <span>♫ 3,881</span>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
